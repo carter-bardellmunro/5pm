@@ -1,10 +1,37 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import { formatCityName } from '@/actions/formateName';
 import { TimeZoneProps } from '@/lib/types';
 
-const Location = ({ zone }: { zone: TimeZoneProps }) => {
+const fadeInAmimationsVariant = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
+
+const Location = ({ zone }: { zone: TimeZoneProps }, index: number) => {
   return (
-    <div className="bg-white border border-black/10 flex flex-col items-center rounded-lg my-2 mx-5 sm:m-1 p-3">
+    <motion.div
+      className="bg-white border border-black/10 flex flex-col items-center rounded-lg my-2 mx-5 sm:m-1 p-3"
+      key={index}
+      variants={fadeInAmimationsVariant}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
+      custom={index}
+    >
       <h2>{zone.countryName}</h2>
       <ul>
         <li key={zone.countryCode}>
@@ -19,7 +46,7 @@ const Location = ({ zone }: { zone: TimeZoneProps }) => {
           })}
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

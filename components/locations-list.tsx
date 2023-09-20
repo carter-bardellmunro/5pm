@@ -9,8 +9,8 @@ const LocationsList = async () => {
   return (
     <section className="w-full mx-3 justify-center sm:max-w-[52rem] sm:flex sm:flex-wrap">
       {timezones.length > 0 ? (
-        timezones.map((zone: TimeZoneProps) => (
-          <Locations zone={zone} key={zone.countryCode} />
+        timezones.map((zone: TimeZoneProps, index) => (
+          <Locations zone={zone} key={index} />
         ))
       ) : (
         <li>No cities found</li>
