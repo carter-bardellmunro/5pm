@@ -3,7 +3,7 @@ import Times from '@/components/times';
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <Times />
     </div>
   );

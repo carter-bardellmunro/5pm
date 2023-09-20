@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Its Five OClock Somewhere',
-  description: 'Wanna know where its five oclock in the world?',
+  title: 'Its Five OClock Somewhere?',
+  description: 'Its five oclock somewhere in the world, right?',
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-sky-50`}>{children}</body>
     </html>
   )
 }
