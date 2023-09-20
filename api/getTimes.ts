@@ -1,10 +1,4 @@
-type TimeZoneProps = {
-  countryCode: string;
-  countryName: string;
-  zoneName: string;
-  gmtOffset: number;
-  timestamp: number;
-};
+import { TimeZoneProps } from "@/lib/types";
 
 const apiKey = process.env.TIMEZONE_DB_API_KEY;
 const apiUrl = 'http://api.timezonedb.com/v2.1/list-time-zone';

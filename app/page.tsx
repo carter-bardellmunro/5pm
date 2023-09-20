@@ -1,5 +1,5 @@
 import React from 'react';
-import Times from '@/components/times';
+import Times from '@/components/locations-list';
 
 const Home = () => {
   return (
