@@ -22,7 +22,7 @@ const fadeInAmimationsVariant = {
 const Location = ({ zone }: { zone: TimeZoneProps }, index: number) => {
   return (
     <motion.div
-      className="bg-white border border-black/10 flex flex-col items-center rounded-lg my-2 mx-5 sm:m-1 p-3"
+      className="bg-stone-50 border border-black/10 flex flex-col items-center rounded-lg my-2 mx-5 sm:m-1 p-3"
       key={index}
       variants={fadeInAmimationsVariant}
       initial="initial"
