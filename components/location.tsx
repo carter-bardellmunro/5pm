@@ -14,7 +14,7 @@ const fadeInAmimationsVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.05 * index,
+      delay: 0.5 * index,
     },
   }),
 };
@@ -22,7 +22,7 @@ const fadeInAmimationsVariant = {
 const Location = ({ zone }: { zone: TimeZoneProps }, index: number) => {
   return (
     <motion.div
-      className="bg-stone-50 border border-black/10 flex flex-col items-center rounded-lg my-2 mx-5 sm:m-1 p-3"
+      className="bg-stone-50 border border-black/10 flex flex-col items-center rounded-lg max-w-[52rem] my-4 sm:m-2 p-3"
       key={index}
       variants={fadeInAmimationsVariant}
       initial="initial"

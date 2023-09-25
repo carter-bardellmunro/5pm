@@ -3,7 +3,7 @@ import Intro from '@/components/intro';
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center px-4">
       <Intro />
     </div>
   );
