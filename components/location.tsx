@@ -10,13 +10,10 @@ const fadeInAmimationsVariant = {
     opacity: 0,
     y: 100,
   },
-  animate: (index: number) => ({
+  animate: {
     opacity: 1,
     y: 0,
-    transition: {
-      delay: 0.5 * index,
-    },
-  }),
+  },
 };
 
 const Location = ({ zone }: { zone: TimeZoneProps }, index: number) => {
@@ -26,11 +23,7 @@ const Location = ({ zone }: { zone: TimeZoneProps }, index: number) => {
       key={index}
       variants={fadeInAmimationsVariant}
       initial="initial"
-      whileInView="animate"
-      viewport={{
-        once: true,
-      }}
-      custom={index}
+      animate="animate" 
     >
       <h2>{zone.countryName}</h2>
       <ul>

@@ -7,7 +7,7 @@ const LocationsList = async () => {
   const timezones = await getFivePmTimeZones();
 
   return (
-    <section className="justify-center w-full my-4 sm:flex sm:flex-wrap">
+    <section className="justify-center w-full my-4 sm:w-9/12 sm:flex sm:flex-wrap">
       {timezones.length > 0 ? (
         timezones.map((zone: TimeZoneProps, index) => (
           <Locations zone={zone} key={index} />
